@@ -5,11 +5,9 @@ def encode(password):
     return encoded
 
 
-def decode(password):
-    decoded = ""
-    for char in password:
-        decoded += str((int(char) - 3) % 10)
-    return decoded
+# def decode(password):
+#     # to be done by partner
+#     return decoded
 
 
 def main():
@@ -22,7 +20,6 @@ def main():
               "3. Quit")
         print()
         option = input("Please enter an option: ")
-
         if option == "1":
             password = input("Please enter the password to encode: ")
             encoded_password = encode(password)
@@ -34,7 +31,6 @@ def main():
             print()
         elif option == "3":
             break
-
         else:
             print("Invalid option, please try again.")
 
