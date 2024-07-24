@@ -5,9 +5,12 @@ def encode(password):
     return encoded
 
 
-# def decode(password):
-#     # to be done by partner
-#     return decoded
+def decode(password):
+    decoded_password = ""
+    for char in password:
+        new_char = str((int(char) - 3) % 10)
+        decoded_password += new_char
+    return decoded_password
 
 
 def main():
